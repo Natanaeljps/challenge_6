@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*===Variaveis===*/
+:root {
+  /*---colors---*/
+  --red-color: hsl(0, 78%, 62%);
+  --cyan-color: hsl(180, 62%, 55%);
+  --orange-color: hsl(34, 97%, 64%);
+  --blue-color: hsl(212, 86%, 64%);
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-grey: hsl(0, 0%, 98%);
+  /*----fonts----*/
+  --font-200: 200 0.9375rem 'Poppins', sans-serif;
+  --font-400: 400 0.9375rem 'Poppins', sans-serif;
+  --font-600: 400 1.5rem 'Poppins', sans-serif;
+}
+
+body {
+  color: var(--very-dark-blue);
+  margin: 6rem 2rem;
+  background: var(--very-light-grey);
+}
+
+.home {
+  text-align: center;
+}
+
+.home p {
+  font: var(--font-400);
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font: var(--font-600);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font: var(--font-400);
+  padding: 1rem;
+}
+
+p {
+  font: var(--font-200);
+  padding: 0rem 1rem;
+}
+
+/*---layout---*/
+
+div {
+  box-shadow: 0 0.5rem  1.5rem -1rem var(--grayish-blue);
+  margin-bottom: 1.5rem;
+}
+
+/*==================*/
+
+div.cyan {
+  border-top: solid 0.3rem var(--cyan-color);
+  border-radius: 0.5rem;
+}
+
+div.red {
+  border-top: solid 0.3rem var(--red-color);
+  border-radius: 0.5rem;
+}
+
+div.orange {
+  border-top: solid 0.3rem var(--orange-color);
+  border-radius: 0.5rem;
+}
+
+div.blue {
+  border-top: solid 0.3rem var(--blue-color);
+  border-radius: 0.5rem;
+}
+
+.image {
+  box-shadow: none;
+  margin-left: 12rem;
+  padding: 1.5rem;
+}
+
+/*========MEDIA QUERIES========*/
+/* EXTRA LARGE DEVICES: > 1440px */
+@media (min-width: 1440px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      'h h h'
+      'c r b'
+      'c o b';
+  }
+
+  .home p {
+    padding: 1rem 27rem;
+  }
+
+  .home {
+    grid-area: h;
+    
+  }
+
+  .supervisor {
+    display: flex;
+    grid-area: c;
+    padding-top: 7rem;
+    width: 30rem;
+    height: 22rem;
+    padding-left: 7rem;
+  }
+
+  .team_builder {
+    display: flex;
+    width: 23rem;
+    height: 15rem;
+
+    grid-area: r;
+  }
+
+  .karma {
+    display: flex;
+    width: 23rem;
+    height: 15rem;
+
+    grid-area: o;
+  }
+
+  .Calculator {
+    display: flex;
+    padding-top: 7rem;
+    padding-right: 7rem;
+    width: 30rem;
+    height: 22rem;
+    grid-area: b;
+  }
+
+  .image{
+    padding-left: 5rem;
+  }
+
+
+
+}
